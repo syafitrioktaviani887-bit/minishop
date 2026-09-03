@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useKeranjang } from "../context/KeranjangContext";
+import { useKeranjang } from "../context/KeranjangContext.jsx";
 
 function Home() {
   const { tambahKeKeranjang } = useKeranjang();
@@ -188,5 +188,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

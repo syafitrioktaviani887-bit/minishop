@@ -1,4 +1,4 @@
-import { useKeranjang } from "../context/KeranjangContext";
+import { useKeranjang } from "../context/KeranjangContext.jsx";
 import { Link } from "react-router-dom";
 
 function Keranjang() {
@@ -43,5 +43,3 @@ function Keranjang() {
     </div>
   );
 }
-
-export default Keranjang;

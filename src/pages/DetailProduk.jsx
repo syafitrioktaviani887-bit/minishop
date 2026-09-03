@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { daftarProduk } from "../data/produk";
-import Button from "../components/Button";
-import Badge from "../components/Badge";
+import Button from "../components/Button.jsx";
+import Badge from "../components/Badge.jsx";
 
 function DetailProduk() {
   const { id } = useParams();
@@ -61,5 +61,3 @@ function DetailProduk() {
     </div>
   );
 }
-
-export default DetailProduk;

@@ -1,12 +1,11 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import Button from "./Button";
-import Badge from "./Badge";
+import Button from "./Button.jsx";
+import Badge from "./Badge.jsx";
 
 const ProdukCard = memo(({ produk }) => {
   return (
     <div className="border rounded-lg p-4 shadow bg-white flex flex-col justify-between relative">
-      {/* Label Stok (Tersedia / Habis) */}
       <div className="absolute top-2 right-2">
         {produk.stok ? (
           <Badge text="Stok Tersedia" type="success" />
@@ -43,5 +42,3 @@ const ProdukCard = memo(({ produk }) => {
     </div>
   );
 });
-
-export default ProdukCard;
