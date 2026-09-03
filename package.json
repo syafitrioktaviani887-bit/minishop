@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "vitest",
     "dev": "vite",
     "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "oxlint"
   },
   "dependencies": {
     "react": "^19.2.8",
@@ -24,7 +24,6 @@
     "@vitejs/plugin-react": "^6.1.1",
     "autoprefixer": "^10.5.4",
     "jsdom": "^29.1.1",
-    "laravel-vite-plugin": "^3.2.0",
     "oxlint": "^1.75.0",
     "postcss": "^8.5.27",
     "tailwindcss": "^4.3.3",
