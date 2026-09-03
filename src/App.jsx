@@ -1,17 +1,18 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Header from "./components/Header";
+// Tambahkan ekstensi .jsx
+import Home from "./pages/Home.jsx";
+import Header from "./components/Header.jsx";
 
 import { KeranjangProvider } from "./context/KeranjangContext";
 import { AuthProvider } from "./context/AuthContext";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
-// Lazy loading halaman
-const DetailProduk = lazy(() => import("./pages/DetailProduk"));
-const Keranjang = lazy(() => import("./pages/Keranjang"));
-const Auth = lazy(() => import("./pages/Auth"));
+// Tambahkan .jsx di lazy load
+const DetailProduk = lazy(() => import("./pages/DetailProduk.jsx"));
+const Keranjang = lazy(() => import("./pages/Keranjang.jsx"));
+const Auth = lazy(() => import("./pages/Auth.jsx"));
 
 function App() {
   return (
@@ -23,12 +24,7 @@ function App() {
           <Suspense fallback={<div className="p-6 text-center">Memuat...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
-
-              <Route
-                path="/produk/:id"
-                element={<DetailProduk />}
-              />
-
+              <Route path="/produk/:id" element={<DetailProduk />} />
               <Route
                 path="/keranjang"
                 element={
@@ -37,7 +33,6 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-
               <Route path="/login" element={<Auth />} />
             </Routes>
           </Suspense>
